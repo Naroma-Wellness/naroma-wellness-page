@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Naroma Wellness | Naturalna Moc Olejków Eterycznych</title>
+    <meta name="description"
+        content="Pobierz darmowy eBook o olejkach eterycznych i dowiedz się, jak naturalnie wspierać sen, odporność i dobre samopoczucie.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;display=swap"
+        rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <link rel="icon" href="favicon.png">
+
+    <meta property="og:title" content="Naroma Wellness">
+
+    <meta property="og:description" content="Pobierz darmowy eBook o olejkach eterycznych">
+
+    <!-- TODO: podmień na prawdziwą domenę po wdrożeniu -->
+    <meta property="og:image" content="https://twojadomena.pl/ebook.jpg">
+
+    <meta property="og:type" content="website">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dee4db",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#0b200c",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#866833",
+                        "on-secondary-container": "#60665f",
+                        "on-secondary-fixed-variant": "#424842",
+                        "surface-bright": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-container": "#ffedd6",
+                        "on-secondary-fixed": "#171d18",
+                        "on-primary-fixed-variant": "#364c34",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fbf9f8",
+                        "inverse-on-surface": "#f3f0f0",
+                        "tertiary": "#6b501e",
+                        "inverse-surface": "#303030",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c3c8bf",
+                        "tertiary-fixed": "#ffdea9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "error-container": "#ffdad6",
+                        "outline": "#737970",
+                        "surface-tint": "#4d644a",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-fixed": "#271900",
+                        "secondary": "#5a6059",
+                        "primary-fixed-dim": "#b3ceae",
+                        "background": "#fbf9f8",
+                        "inverse-primary": "#b3ceae",
+                        "tertiary-fixed-dim": "#e6c184",
+                        "secondary-fixed-dim": "#c2c8c0",
+                        "primary-fixed": "#cfeac9",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-fixed-variant": "#5c4211",
+                        "surface-container-high": "#eae7e7",
+                        "on-background": "#1b1c1c",
+                        "primary-container": "#5b7358",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary-container": "#dcf7d6",
+                        "primary": "#435a41",
+                        "on-surface-variant": "#434841",
+                        "secondary-fixed": "#dee4db",
+                        "surface-variant": "#e4e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "stack-lg": "64px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "16px",
+                        "stack-md": "32px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "caption": ["DM Sans"],
+                        "headline-lg-mobile": ["EB Garamond"],
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "label-md": ["DM Sans"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "body-lg": ["DM Sans"],
+                        "headline-md": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-nav {
+            background: rgba(251, 249, 248, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        .organic-blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        .organic-bg {
+            background: radial-gradient(circle at 10% 20%, rgba(207, 234, 201, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(222, 228, 219, 0.2) 0%, transparent 40%);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed organic-bg">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+        <div class="flex justify-between items-center px-margin-desktop py-stack-sm max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md text-primary uppercase tracking-tighter">NAROMA WELLNESS</div>
+            <div class="hidden md:flex gap-10 items-center">
+                <a class="font-label-md text-label-md tracking-widest uppercase text-primary border-b border-tertiary pb-1"
+                    href="#ebook">O eBooku</a>
+                <a class="font-label-md text-label-md tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-400"
+                    href="#kontakt">Kontakt</a>
+            </div>
+            <a class="bg-primary text-on-primary px-8 py-3 font-label-md text-label-md tracking-widest uppercase hover:opacity-90 transition-opacity ease-in-out rounded-full"
+                href="testuj-olejki.html">TESTUJ OLEJKI</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="pt-[160px] pb-section-gap px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center relative"
+        id="hero">
+        <div class="reveal relative z-10 md:-mr-12">
+            <h1 class="font-display-lg text-display-lg text-primary mb-stack-md leading-[1.1]">Naturalna moc olejków
+                eterycznych i zacznij korzystać z nich świadomie</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md max-w-lg">
+                Poznaj praktyczne zastosowania olejków eterycznych i dowiedz się, jak wykorzystywać je na co dzień, aby
+                wspierać zdrowie, sen oraz dobre samopoczucie.
+            </p>
+            <div class="flex flex-col gap-6">
+                <a class="inline-block bg-tertiary text-on-tertiary px-10 py-5 font-label-md text-label-md tracking-widest uppercase text-center md:w-fit shadow-xl hover:bg-primary transition-all duration-400 rounded-full"
+                    href="#pobierz">
+                    Pobierz darmowy eBook
+                </a>
+                <p class="font-caption text-caption text-on-surface-variant flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> 100% darmowy
+                    <span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Natychmiastowy dostęp
+                    <span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Bez spamu
+                </p>
+            </div>
+        </div>
+        <div class="reveal delay-200 relative">
+            <div class="absolute -inset-10 bg-secondary-container/20 blur-[80px] organic-blob"></div>
+            <div class="relative overflow-hidden rounded-xl shadow-2xl">
+                <img alt="Naturalna moc olejków eterycznych eBook"
+                    class="w-full h-auto transition-transform duration-700 hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida/AP1WRLucC8SsW80aaP_FgY4bX-hYNfWRQCbKhwtVdA0KBxz0RuI7Ch8cPqdJ5ArxD6NkgIxx3_q-zZEmh_AlfZxOegk3yhec7vbAAyj6o-A08NZz0LFIh1IjisZbnXg8E5QVq6jRyOK_TDfnFIgw12qMlN7xOub-bLOcdW3eChFScLx_3UosBnUq3vSHW38PCYhg8Dd3EAvn8cTTRmL7UugjFQ5XWKuocSpIatqm3oCHMWrXcJ2zAFgp6m2djNY-" />
+            </div>
+        </div>
+    </section>
+
+    <!-- About eBook / Features -->
+    <section class="py-section-gap bg-secondary-fixed/30 px-margin-desktop rounded-xl mx-4 md:mx-margin-desktop"
+        id="ebook">
+        <div class="max-w-container-max mx-auto">
+            <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-section-gap reveal">Co znajdziesz w
+                darmowym eBooku?</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div
+                    class="bg-surface p-12 reveal rounded-xl hover:shadow-2xl transition-all duration-500 border border-outline-variant/20 group">
+                    <span
+                        class="material-symbols-outlined text-tertiary text-4xl mb-stack-md block group-hover:scale-110 transition-transform"
+                        data-icon="eco">eco</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Podstawy olejków eterycznych</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Poznaj najważniejsze informacje
+                        dotyczące jakości, pochodzenia oraz bezpieczeństwa wyboru czystych esencji.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-surface p-12 reveal delay-100 rounded-xl hover:shadow-2xl transition-all duration-500 border border-outline-variant/20 group">
+                    <span
+                        class="material-symbols-outlined text-tertiary text-4xl mb-stack-md block group-hover:scale-110 transition-transform"
+                        data-icon="spa">spa</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Praktyczne zastosowanie</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Dowiedz się, jak wykorzystać olejki w
+                        codziennym życiu – od relaksu po domowe SPA i naturalne porządki.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-surface p-12 reveal delay-200 rounded-xl hover:shadow-2xl transition-all duration-500 border border-outline-variant/20 group">
+                    <span
+                        class="material-symbols-outlined text-tertiary text-4xl mb-stack-md block group-hover:scale-110 transition-transform"
+                        data-icon="verified_user">verified_user</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Bezpieczne korzystanie</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Naucz się fundamentalnych zasad
+                        odpowiedzialnego stosowania olejków u dzieci, dorosłych i seniorów.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto overflow-hidden" id="korzysci">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="order-2 md:order-1 reveal relative">
+                <div class="absolute -inset-4 bg-tertiary/5 rounded-xl -rotate-2"></div>
+                <div class="aspect-[4/5] bg-cover bg-center rounded-xl shadow-xl relative z-10"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlfDzDmFZu4t01cIPMSUPNZRh8J0kvi_FGK3ITxc3U8iAcdIzadV0-MtcHxUyQfshFBBf4_ccHpbDelqH8T7_d09Tc-0F5hCydjReft_H9RrUVIWzLVawYefdIJorL4fwnb0XFM12uLIvhListbsGJ4H2dXH2zl2rBBuxifZjUmiVv1oClS585N05Sw4r3HzwENdmwzFRYLZpayYFhEarUaLqmoPXLnsNlr8jxXvdYvbLf__hEZhNSTm855A16t48-knN_iNeXdVHF')">
+                </div>
+            </div>
+            <div
+                class="order-1 md:order-2 reveal delay-200 z-20 bg-surface/80 backdrop-blur-sm p-10 rounded-xl shadow-lg border border-outline-variant/20">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg leading-tight">Dlaczego warto
+                    pobrać ten poradnik?</h2>
+                <ul class="space-y-8">
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-tertiary"
+                            data-icon="check_circle">check_circle</span>
+                        <div>
+                            <p class="font-body-lg text-body-lg font-bold text-primary">Naturalna wiedza</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Skondensowane informacje bez
+                                zbędnych wypełniaczy.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-tertiary"
+                            data-icon="check_circle">check_circle</span>
+                        <div>
+                            <p class="font-body-lg text-body-lg font-bold text-primary">Praktyczne wskazówki</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Gotowe przepisy i mieszanki do
+                                zastosowania od zaraz.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-tertiary"
+                            data-icon="check_circle">check_circle</span>
+                        <div>
+                            <p class="font-body-lg text-body-lg font-bold text-primary">Proste rozwiązania</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Skupiamy się na tym, co
+                                naprawdę działa w domowych warunkach.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Newsletter Signup -->
+    <section class="py-16 mx-4 md:mx-margin-desktop mb-section-gap relative" id="pobierz">
+        <div class="absolute inset-0 bg-primary rounded-xl overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 organic-blob -translate-y-1/2 translate-x-1/4">
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-margin-mobile text-center reveal">
+
+            <div id="formContainer">
+
+                <h2 class="font-headline-lg text-headline-lg text-on-primary mb-stack-md">Odbierz darmowy eBook</h2>
+                <p class="font-body-lg text-body-lg text-on-primary mb-stack-lg opacity-90">Podaj swój adres email, aby
+                    uzyskać dostęp do darmowego poradnika.</p>
+
+
+                <form id="form"
+                    action="https://3aaeb925.sibforms.com/serve/MUIFAJzsw_nd6BoRDY2kn8mCF0NPyU-pY5-Nz3u4aPjDRT2wKehli--qr2wcgbLlDhiQypdbYSyAYjTLiOgdpiLbCrl6wTsi7VlzMOogcktxTViLABXRL5IeYXQ-yZ2SwPiYPzn1pp1NaFtXNSxJ2MhwnpaPACj-vAFtLBv3xmazoQzKpEadCG27vyZT2A_Kfvnxj9ffod-y7rqw0A=="
+                    method="POST" class="flex flex-col gap-6 mt-10">
+
+                    <!--
+                        WAŻNE: Brevo zwykle generuje też pola ukryte, np.:
+                        <input type="text" name="locale" value="pl" style="display:none">
+                        <input type="text" name="html_type" value="simple" style="display:none">
+                        oraz pole-pułapkę anty-spamową typu:
+                        <input type="text" name="email_address_check" value="" style="display:none">
+                        <input type="hidden" name="locale" value="pl">
+
+                        WEJDŹ w Brevo -> Kontakty -> Formularze -> Twój formularz -> "Udostępnij"/"Pobierz kod"
+                        i porównaj z tym co masz tutaj. Jeśli w oryginalnym kodzie Brevo są dodatkowe
+                        ukryte <input>, dodaj je tutaj 1:1 (same name="" i value=""), inaczej zgłoszenie
+                        może nie zapisać się poprawnie po stronie Brevo, mimo że formularz "wygląda" na wysłany.
+                    -->
+
+                    <!-- INPUTY -->
+                    <div class="grid md:grid-cols-2 gap-6">
+
+                        <input type="text" name="FIRSTNAME" placeholder="Wpisz swoje imię" required
+                            class="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur text-white placeholder-white/60 border border-white/20 focus:outline-none focus:ring-2 focus:ring-tertiary transition">
+
+                        <input type="email" name="EMAIL" placeholder="Wpisz swój adres email" required
+                            class="w-full px-6 py-4 rounded-xl bg-white/10 backdrop-blur text-white placeholder-white/60 border border-white/20 focus:outline-none focus:ring-2 focus:ring-tertiary transition">
+
+                    </div>
+
+                    <!-- CHECKBOX -->
+                    <label class="flex items-center gap-3 text-white/80 text-sm cursor-pointer">
+
+                        <input type="checkbox" name="ZGODA_MARKETING" value="1" required
+                            class="w-5 h-5 accent-tertiary rounded">
+
+                        <span class="text-sm leading-6 text-left">
+                            Wyrażam zgodę na przetwarzanie moich danych osobowych w celu otrzymania
+                            bezpłatnego eBooka oraz informacji marketingowych zgodnie z
+                            <a href="polityka-prywatnosci.html" class="underline hover:text-white transition">
+                                Polityką Prywatności
+                            </a>.
+                        </span>
+
+                    </label>
+
+
+                    <!-- BUTTON -->
+                    <button type="submit" id="submitBtn"
+                        class="mt-4 w-full bg-tertiary hover:bg-[#8a6a2f] text-white font-semibold tracking-widest uppercase py-5 rounded-full transition-all duration-300 shadow-xl hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed">
+                        WYŚLIJ MI EBOOK
+                    </button>
+
+                </form>
+
+
+            </div>
+
+
+
+            <div id="thankYou" class="hidden text-center mt-10 text-white">
+
+
+                <div class="w-36 h-36 mx-auto mb-8 rounded-full bg-white/10 flex items-center justify-center shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-24 h-24 text-white drop-shadow-[0_0_12px_rgba(16,185,129,0.5)]" fill="none"
+                        viewBox="0 0 24 24">
+                        <path d="M12 5c-2-1-4-1-6-1-1 0-2 1-2 2v11c0-1 1-2 2-2 2 0 4 0 6 1V5z" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" />
+                        <path d="M12 5c2-1 4-1 6-1 1 0 2 1 2 2v11c0-1-1-2-2-2-2 0-4 0-6 1V5z" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-serif mb-4">
+                    Dziękujemy! 🌿
+                </h1>
+
+                <p class="text-lg text-white opacity-90 mb-8 leading-relaxed">
+                    📩 Twój eBook już do Ciebie leci! Sprawdź skrzynkę odbiorczą (i folder Spam
+                    lub Oferty, jeśli nie widzisz wiadomości od razu).
+                </p>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 max-w-xl mx-auto border border-white/20">
+
+                    <h3 class="text-2xl font-serif text-white mb-4">
+                        Chcesz zrobić kolejny krok?
+                    </h3>
+
+                    <p class="text-white/90 mb-6 leading-relaxed">
+                        Poznaj świat olejków eterycznych w praktyce.
+                        Otrzymasz zestaw próbek 4 najpopularniejszych olejków oraz pokażę Ci krok po kroku,
+                        jak z nich korzystać w codziennym życiu.
+                    </p>
+
+                    <a href="testuj-olejki.html"
+                        class="inline-block bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                        ➜ Testuj olejki
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer id="kontakt" class="bg-[#F8F6F2] border-t border-[#E5DED2] py-14">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+
+            <h3 class="text-4xl font-serif text-[#486548] mb-3">
+                Naroma Wellness
+            </h3>
+
+            <p class="text-[#6F7867] mb-12">
+                Naturalna droga do zdrowia i dobrego samopoczucia 🌿
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-10">
+
+                <div class="text-center">
+                    <span class="material-symbols-outlined text-4xl text-[#B88422] mb-3">
+                        mail
+                    </span>
+
+                    <h4 class="font-semibold text-[#486548] uppercase tracking-wider mb-2">
+                        E-mail
+                    </h4>
+
+                    <a href="mailto:naroma.wellness@gmail.com" class="text-[#6F7867] hover:text-[#B88422] transition">
+                        naroma.wellness@gmail.com
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <span class="material-symbols-outlined text-4xl text-[#B88422] mb-3">
+                        photo_camera
+                    </span>
+
+                    <h4 class="font-semibold text-[#486548] uppercase tracking-wider mb-2">
+                        Instagram
+                    </h4>
+
+                    <a href="https://instagram.com/naroma.wellness" target="_blank"
+                        class="text-[#6F7867] hover:text-[#B88422] transition">
+                        @naroma.wellness
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <span class="material-symbols-outlined text-4xl text-[#B88422] mb-3">
+                        description
+                    </span>
+
+                    <h4 class="font-semibold text-[#486548] uppercase tracking-wider mb-2">
+                        Dokumenty
+                    </h4>
+
+                    <a href="polityka-prywatnosci.html" class="text-[#6F7867] hover:text-[#B88422] transition">
+                        Polityka prywatności
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="border-t border-[#486548] mt-12 pt-6">
+                <p class="text-sm text-[#8E9488]">
+                    © 2026 Naroma Wellness • Wszelkie prawa zastrzeżone
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.material-symbols-outlined');
+
+            document.querySelectorAll('#faq .bg-surface > div:not(.hidden)').forEach(el => {
+                if (el !== content) {
+                    el.classList.add('hidden');
+                    el.previousElementSibling.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            const isHidden = content.classList.contains('hidden');
+            content.classList.toggle('hidden');
+            icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        // Scroll Reveal Implementation
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
+        document.getElementById("form").addEventListener("submit", async function (e) {
+
+            e.preventDefault();
+            const form = this;
+            const submitBtn = document.getElementById("submitBtn");
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = "WYSYŁAM...";
+
+            try {
+                // mode: "no-cors" jest wymagany przez formularze Brevo (cross-origin) —
+                // oznacza to, że nie odczytamy statusu odpowiedzi (opaque response),
+                // ale sam request i tak dociera do Brevo i zapisuje kontakt na liście.
+                await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    mode: "no-cors"
+                });
+            } catch (err) {
+                // Brak internetu / zablokowany request — i tak pokazujemy ebook,
+                // żeby nie blokować użytkownika, ale warto to monitorować.
+                console.error("Błąd wysyłki do Brevo:", err);
+            }
+
+            // ukryj formularz, pokaż podziękowanie
+            // (ebook NIE pobiera się tutaj lokalnie — dociera wyłącznie mailem
+            // przez automatyzację Brevo, patrz instrukcja w README)
+            document.getElementById("formContainer").style.display = "none";
+            document.getElementById("thankYou").classList.remove("hidden");
+
+        });
+
+    </script>
+
+</body>
+
+</html>
