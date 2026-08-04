@@ -6,8 +6,16 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Naroma Wellness | Naturalna Moc Olejków Eterycznych</title>
+
     <meta name="description"
-        content="Pobierz darmowy eBook o olejkach eterycznych i dowiedz się, jak naturalnie wspierać sen, odporność i dobre samopoczucie.">
+        content="Dowiedz się, co drogeryjne kosmetyki robią z Twoją skórą i pobierz darmowy eBook o naturalnej pielęgnacji olejkami eterycznymi dōTERRA — świadomy sposób na zdrową cerę.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://naromawellness.pl/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
     <link
@@ -20,14 +28,43 @@
 
     <link rel="icon" href="favicon.png">
 
-    <meta property="og:title" content="Naroma Wellness">
 
-    <meta property="og:description" content="Pobierz darmowy eBook o olejkach eterycznych">
-
-    <!-- TODO: podmień na prawdziwą domenę po wdrożeniu -->
-    <meta property="og:image" content="https://naromawellness.pl/ebook.jpg">
-
+    <!-- Open Graph (Facebook, Instagram, LinkedIn itp.) -->
+    <meta property="og:title" content="Naroma Wellness | Naturalna pielęgnacja skóry olejkami eterycznymi">
+    <meta property="og:description"
+        content="Pobierz darmowy eBook i sprawdź, co naprawdę robią z Twoją skórą składniki z drogeryjnej półki.">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+
+    <meta property="og:url" content="https://naromawellness.pl/">
+    <meta property="og:image" content="https://naromawellness.pl/imgs/ebook-skora-cialo.png">
+    <meta property="og:site_name" content="Naroma Wellness">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Naroma Wellness | Naturalna pielęgnacja skóry olejkami eterycznymi">
+    <meta name="twitter:description"
+        content="Pobierz darmowy eBook i sprawdź, co naprawdę robią z Twoją skórą składniki z drogeryjnej półki.">
+    <meta name="twitter:image" content="https://naromawellness.pl/imgs/ebook-skora-cialo.png">
+
+    <!-- Dane strukturalne: pomagają Google zrozumieć, kim jesteś -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Naroma Wellness",
+        "url": "https://naromawellness.pl/",
+        "logo": "https://naromawellness.pl/favicon.png",
+        "sameAs": [
+            "https://instagram.com/naroma.wellness"
+        ],
+        "email": "naroma.wellness@gmail.com",
+        "description": "Naturalna pielęgnacja skóry i dobre samopoczucie oparte na czystych olejkach eterycznych."
+    }
+    </script>
+
+
+
 
     <script id="tailwind-config">
         tailwind.config = {
@@ -156,6 +193,18 @@
             background: radial-gradient(circle at 10% 20%, rgba(207, 234, 201, 0.15) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(222, 228, 219, 0.2) 0%, transparent 40%);
         }
+
+        #mobileMenu {
+            transition: max-height 0.35s ease, opacity 0.25s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        #mobileMenu.open {
+            max-height: 400px;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -165,22 +214,59 @@
     <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
         <div
             class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm max-w-container-max mx-auto">
-            <div class="font-headline-md text-xl md:text-headline-md text-primary uppercase tracking-tighter">NAROMA
-                WELLNESS</div>
-            <div class="hidden md:flex gap-10 items-center">
+            <a href="/"
+                class="font-headline-md text-base sm:text-lg md:text-headline-md text-primary uppercase tracking-tighter truncate">NAROMA
+                WELLNESS</a>
+            <div class="hidden md:flex gap-6 items-center">
                 <a class="font-label-md text-label-md tracking-widest uppercase text-primary border-b border-tertiary pb-1"
                     href="#ebook">O eBooku</a>
+                <a href="zestawy/"
+                    class="flex items-center gap-3 bg-[#F1E9DA] text-primary px-6 py-2.5 rounded-full font-label-md text-label-md tracking-widest uppercase font-bold hover:bg-[#e9dcc4] transition-colors">
+                    <span>Zestawy</span>
+                    <span class="w-px h-4 bg-primary/30"></span>
+                    <span class="text-tertiary">-25%</span>
+                </a>
                 <a class="font-label-md text-label-md tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-400"
                     href="#kontakt">Kontakt</a>
             </div>
-            <a class="bg-primary text-on-primary px-4 py-2.5 md:px-8 md:py-3 text-xs md:text-label-md font-label-md tracking-widest uppercase hover:opacity-90 transition-opacity ease-in-out rounded-full whitespace-nowrap"
-                href="testuj-olejki/">TESTUJ OLEJKI</a>
+            <div class="flex items-center gap-2">
+                <a class="hidden sm:inline-block bg-primary text-on-primary px-4 py-2.5 md:px-8 md:py-3 text-xs md:text-label-md font-label-md tracking-widest uppercase hover:opacity-90 transition-opacity ease-in-out rounded-full whitespace-nowrap"
+                    href="testuj-olejki/">TESTUJ OLEJKI</a>
+                <button id="menuToggle" aria-label="Otwórz menu" aria-expanded="false"
+                    class="md:hidden flex items-center justify-center w-11 h-11 rounded-full border border-outline-variant/40 text-primary flex-shrink-0">
+                    <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Rozwijane menu mobile -->
+        <div id="mobileMenu" class="md:hidden bg-surface border-t border-outline-variant/20">
+            <div class="flex flex-col px-margin-mobile py-3 gap-1">
+                <a href="#ebook"
+                    class="py-3 px-3 rounded-lg hover:bg-secondary-fixed/30 font-label-md text-sm tracking-widest uppercase text-on-surface-variant transition-colors">
+                    O eBooku
+                </a>
+                <a href="zestawy/"
+                    class="py-3 px-3 rounded-lg bg-[#F1E9DA] font-label-md text-sm tracking-widest uppercase text-primary font-bold flex items-center gap-3">
+                    <span>Zestawy</span>
+                    <span class="w-px h-4 bg-primary/30"></span>
+                    <span class="text-tertiary">-25%</span>
+                </a>
+                <a href="#kontakt"
+                    class="py-3 px-3 rounded-lg hover:bg-secondary-fixed/30 font-label-md text-sm tracking-widest uppercase text-on-surface-variant transition-colors">
+                    Kontakt
+                </a>
+                <a href="testuj-olejki/"
+                    class="sm:hidden mt-2 text-center bg-primary text-on-primary py-3 font-label-md text-sm tracking-widest uppercase rounded-full">
+                    Testuj olejki
+                </a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section
-        class="pt-[160px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center relative"
+        class="pt-[130px] md:pt-[160px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center relative"
         id="hero">
         <div class="reveal relative z-10 md:-mr-12">
             <h1
@@ -216,7 +302,7 @@
 
     <!-- About eBook / Features -->
     <section
-        class="py-section-gap bg-secondary-fixed/30 px-margin-mobile md:px-margin-desktop rounded-xl mx-4 md:mx-margin-desktop"
+        class="py-section-gap bg-secondary-fixed/30 px-margin-mobile md:px-margin-desktop rounded-xl mx-4 md:mx-margin-desktop scroll-mt-[70px] md:scroll-mt-[90px]"
         id="ebook">
         <div class="max-w-container-max mx-auto">
             <h2
@@ -266,13 +352,15 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden"
+    <section
+        class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden scroll-mt-[70px] md:scroll-mt-[90px]"
         id="korzysci">
         <div class="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             <div class="order-2 md:order-1 reveal relative">
                 <div class="absolute -inset-4 bg-tertiary/5 rounded-xl -rotate-2"></div>
-                <div class="aspect-[4/5] bg-cover bg-center rounded-xl shadow-xl relative z-10"
-                    style="background-image: url(imgs/Lavender.jpg)">
+                <div class="aspect-[4/5] rounded-xl shadow-xl relative z-10 overflow-hidden">
+                    <img src="imgs/Lavender.jpg" alt="Naturalny olejek eteryczny z lawendy"
+                        class="w-full h-full object-cover" loading="lazy" />
                 </div>
             </div>
             <div
@@ -323,7 +411,8 @@
     </section>
 
     <!-- Premium Newsletter Signup -->
-    <section class="py-16 mx-4 md:mx-margin-desktop mb-section-gap relative" id="pobierz">
+    <section class="py-16 mx-4 md:mx-margin-desktop mb-section-gap relative scroll-mt-[70px] md:scroll-mt-[90px]"
+        id="pobierz">
         <div class="absolute inset-0 bg-primary rounded-xl overflow-hidden shadow-2xl">
             <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 organic-blob -translate-y-1/2 translate-x-1/4">
             </div>
@@ -439,16 +528,15 @@
         <div class="max-w-3xl mx-auto px-margin-mobile text-center reveal">
             <span class="font-label-md text-label-md tracking-widest uppercase text-tertiary">Zrób kolejny krok</span>
             <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-3 mb-stack-md">
-                Poznaj zestaw Home Essentials
+                Poznaj zestawy startowe
             </h2>
             <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
-                Cztery olejki z eBooka to dopiero początek — zestaw Home Essentials to komplet 10 najważniejszych
-                olejków dōTERRA na start, plus dyfuzor w prezencie i moje wsparcie na każdym kroku.
+                Cztery olejki z eBooka to dopiero początek — sprawdź pełną ofertę zestawów dōTERRA, dopasowanych
+                do Twoich potrzeb: od zestawu wprowadzającego, przez pakiet dla domu, po zestaw dla całej rodziny.
             </p>
-            <a target="_blank" rel="noopener noreferrer"
-                class="inline-block bg-primary text-on-primary px-10 py-4 font-label-md text-label-md tracking-widest uppercase hover:opacity-90 transition-opacity ease-in-out rounded-full"
-                href="https://doterra.me/u7iL_C">
-                Zobacz zestaw Home Essentials
+            <a class="inline-block bg-primary text-on-primary px-10 py-4 font-label-md text-label-md tracking-widest uppercase hover:opacity-90 transition-opacity ease-in-out rounded-full"
+                href="zestawy/">
+                Zobacz wszystkie zestawy
             </a>
         </div>
 
@@ -456,7 +544,7 @@
 
 
     <!-- Footer -->
-    <footer id="kontakt" class="bg-[#F8F6F2] border-t border-[#E5DED2] py-14">
+    <footer id="kontakt" class="bg-[#F8F6F2] border-t border-[#E5DED2] py-14 scroll-mt-[70px] md:scroll-mt-[90px]">
         <div class="max-w-6xl mx-auto px-6 text-center">
 
             <h3 class="text-4xl font-serif text-[#486548] mb-3">
@@ -509,6 +597,10 @@
 
                     <a href="polityka-prywatnosci/" class="text-[#6F7867] hover:text-[#B88422] transition">
                         Polityka prywatności
+                    </a>
+                    <br>
+                    <a href="regulamin/" class="text-[#6F7867] hover:text-[#B88422] transition">
+                        Regulamin
                     </a>
                 </div>
 
@@ -587,6 +679,27 @@
             document.getElementById("formContainer").style.display = "none";
             document.getElementById("thankYou").classList.remove("hidden");
 
+        });
+
+        // Menu mobilne
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuIcon.textContent = 'menu';
+        }
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuIcon.textContent = isOpen ? 'close' : 'menu';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
 
     </script>
