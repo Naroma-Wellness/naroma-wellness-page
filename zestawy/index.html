@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Naroma Wellness | Zestawy startowe -25%</title>
+    <meta name="description"
+        content="Poznaj zestawy startowe olejków dōTERRA w cenie klienta hurtowego — nawet 25% taniej niż w cenie detalicznej.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="../favicon.png">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dee4db",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#0b200c",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#866833",
+                        "on-secondary-container": "#60665f",
+                        "on-secondary-fixed-variant": "#424842",
+                        "surface-bright": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-container": "#ffedd6",
+                        "on-secondary-fixed": "#171d18",
+                        "on-primary-fixed-variant": "#364c34",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fbf9f8",
+                        "inverse-on-surface": "#f3f0f0",
+                        "tertiary": "#6b501e",
+                        "inverse-surface": "#303030",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c3c8bf",
+                        "tertiary-fixed": "#ffdea9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "error-container": "#ffdad6",
+                        "outline": "#737970",
+                        "surface-tint": "#4d644a",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-fixed": "#271900",
+                        "secondary": "#5a6059",
+                        "primary-fixed-dim": "#b3ceae",
+                        "background": "#fbf9f8",
+                        "inverse-primary": "#b3ceae",
+                        "tertiary-fixed-dim": "#e6c184",
+                        "secondary-fixed-dim": "#c2c8c0",
+                        "primary-fixed": "#cfeac9",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-fixed-variant": "#5c4211",
+                        "surface-container-high": "#eae7e7",
+                        "on-background": "#1b1c1c",
+                        "primary-container": "#5b7358",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary-container": "#dcf7d6",
+                        "primary": "#435a41",
+                        "on-surface-variant": "#434841",
+                        "secondary-fixed": "#dee4db",
+                        "surface-variant": "#e4e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "stack-lg": "64px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "16px",
+                        "stack-md": "32px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "caption": ["DM Sans"],
+                        "headline-lg-mobile": ["EB Garamond"],
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "label-md": ["DM Sans"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "body-lg": ["DM Sans"],
+                        "headline-md": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["38px", { "lineHeight": "46px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "headline-md-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-nav {
+            background: rgba(251, 249, 248, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        .organic-bg {
+            background: radial-gradient(circle at 10% 20%, rgba(207, 234, 201, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(222, 228, 219, 0.2) 0%, transparent 40%);
+        }
+
+        .detail-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .detail-panel.open {
+            max-height: 600px;
+        }
+
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+
+        .chevron.open {
+            transform: rotate(180deg);
+        }
+
+        #mobileMenu {
+            transition: max-height 0.35s ease, opacity 0.25s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        #mobileMenu.open {
+            max-height: 400px;
+            opacity: 1;
+        }
+
+        /* Karta wyróżniona jako najkorzystniejsza */
+        .featured-card {
+            box-shadow: 0 0 0 3px rgba(67, 90, 65, 0.18), 0 22px 45px -15px rgba(67, 90, 65, 0.4);
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        .featured-card:hover {
+            box-shadow: 0 0 0 3px rgba(67, 90, 65, 0.3), 0 28px 55px -15px rgba(67, 90, 65, 0.5);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media (min-width: 640px) {
+            .featured-badge {
+                left: 32px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed organic-bg">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm max-w-container-max mx-auto">
+            <a href="/"
+                class="font-headline-md text-base sm:text-lg md:text-headline-md text-primary uppercase tracking-tighter truncate">NAROMA
+                WELLNESS</a>
+            <div class="hidden md:flex gap-6 items-center">
+                <a class="flex items-center gap-3 bg-[#F1E9DA] text-primary px-6 py-2.5 rounded-full font-label-md text-label-md tracking-widest uppercase font-bold hover:bg-[#e9dcc4] transition-colors"
+                    href="../testuj-olejki/">Testuj olejki</a>
+
+                <a class="font-label-md text-label-md tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-400"
+                    href="#kontakt">Kontakt</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <a class="hidden sm:inline-block bg-primary text-on-primary px-4 py-2.5 md:px-8 md:py-3 text-xs md:text-label-md font-label-md tracking-widest uppercase hover:opacity-90 transition-opacity ease-in-out rounded-full whitespace-nowrap"
+                    href="/">darmowy eBook</a>
+                <button id="menuToggle" aria-label="Otwórz menu" aria-expanded="false"
+                    class="md:hidden flex items-center justify-center w-11 h-11 rounded-full border border-outline-variant/40 text-primary flex-shrink-0">
+                    <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Rozwijane menu mobile -->
+        <div id="mobileMenu" class="md:hidden bg-surface border-t border-outline-variant/20">
+            <div class="flex flex-col px-margin-mobile py-3 gap-1">
+                <a href="/"
+                    class="py-3 px-3 rounded-lg hover:bg-secondary-fixed/30 font-label-md text-sm tracking-widest uppercase text-on-surface-variant transition-colors">
+                    Strona główna / eBook
+                </a>
+                <a href="../testuj-olejki/"
+                    class="py-3 px-3 rounded-lg hover:bg-secondary-fixed/30 font-label-md text-sm tracking-widest uppercase text-on-surface-variant transition-colors">
+                    Testuj olejki
+                </a>
+                <a href="#kontakt"
+                    class="py-3 px-3 rounded-lg hover:bg-secondary-fixed/30 font-label-md text-sm tracking-widest uppercase text-on-surface-variant transition-colors">
+                    Kontakt
+                </a>
+                <a href="/"
+                    class="sm:hidden mt-2 text-center bg-primary text-on-primary py-3 font-label-md text-sm tracking-widest uppercase rounded-full">
+                    Pobierz darmowy eBook
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header
+        class="pt-[130px] md:pt-[160px] pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+        <span class="font-label-md text-label-md tracking-widest uppercase text-tertiary">Cena klienta hurtowego</span>
+        <h1
+            class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mt-3 mb-stack-md leading-[1.1]">
+            Zestawy startowe <span class="text-tertiary">-25%</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+            Zakładając darmowe konto klienta hurtowego dōTERRA przez mój link, płacisz od razu cenę członkowską —
+            czyli 25% mniej niż cena detaliczna. Bez abonamentu, bez zobowiązań do zakupów w kolejnych miesiącach.
+        </p>
+        <div
+            class="mt-6 max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-tertiary/10 border border-tertiary/30 rounded-xl px-5 py-4 text-left">
+            <span class="material-symbols-outlined text-tertiary text-2xl flex-shrink-0">info</span>
+            <p class="font-body-md text-body-md text-on-surface-variant flex-1 text-center sm:text-left">
+                Przy zamówieniu poniżej <span class="font-semibold text-primary">150 PV</span> naliczy się opłata
+                rejestracyjna za członkostwo. Aby jej uniknąć, skontaktuj się ze mną osobiście.
+            </p>
+            <a href="#kontakt"
+                class="flex-shrink-0 inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 font-label-md text-label-md tracking-widest uppercase rounded-full hover:opacity-90 transition-opacity whitespace-nowrap">
+                Kontakt
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Lista zestawów -->
+    <section
+        class="pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto scroll-mt-[70px] md:scroll-mt-[90px]"
+        id="zestawy">
+        <div class="flex flex-col gap-5 md:gap-6">
+
+            <!-- Wiersz 1: Family Essentials -->
+            <div
+                class="reveal delay-100 bg-surface rounded-xl border border-outline-variant/20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden">
+                <div class="flex flex-col sm:flex-row">
+                    <div
+                        class="w-full h-48 sm:h-auto sm:w-48 md:w-60 flex-shrink-0 bg-surface-variant/40 p-4 md:p-6 flex items-center justify-center">
+                        <img src="../imgs/Family_Essentials.png" alt="Zestaw niezbędnych olejków dla rodziny"
+                            class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                    <div class="flex-1 p-5 md:p-6">
+                        <div class="text-center sm:text-left">
+                            <h3 class="font-headline-md text-xl md:text-headline-md text-primary">Zestaw niezbędnych
+                                olejków
+                                dla rodziny</h3>
+                            <div
+                                class="flex flex-wrap items-baseline gap-2 md:gap-3 justify-center sm:justify-start mt-1">
+                                <span
+                                    class="font-body-md text-body-md text-on-surface-variant line-through opacity-60">1117,33
+                                    zł</span>
+                                <span class="font-headline-md text-xl md:text-headline-md text-primary font-bold">838,00
+                                    zł</span>
+                                <span
+                                    class="font-caption text-caption bg-tertiary text-on-tertiary px-2 py-0.5 rounded-full">-25%</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 justify-center sm:justify-start">
+                            <p class="font-body-md text-body-md text-on-surface-variant text-center sm:text-left">
+                                10 podstawowych olejków i mieszanek dōTERRA dobranych tak, by pokryć najczęstsze
+                                potrzeby
+                                całej rodziny — od odporności po spokojny sen.
+                            </p>
+                            <button onclick="toggleDetail(this)"
+                                class="flex-shrink-0 inline-flex items-center gap-1 border border-primary/60 text-primary px-3.5 py-1.5 font-label-md text-[11px] tracking-widest uppercase rounded-full hover:bg-primary hover:text-on-primary hover:border-primary transition-colors whitespace-nowrap">
+                                <span>Zobacz więcej</span>
+                                <span class="material-symbols-outlined chevron text-sm">expand_more</span>
+                            </button>
+                        </div>
+                        <div class="detail-panel">
+                            <div class="border-t border-outline-variant/20 mt-3 pt-4 pb-1">
+                                <p class="font-body-md text-body-md text-on-surface-variant text-center sm:text-left">
+                                    To zestaw, który warto mieć zawsze pod ręką w domowej apteczce — wsparcie
+                                    odporności, trawienie, chwile relaksu i spokojny
+                                    sen. Olejki: Lemon, Oregano, Peppermint, Deep Blue™, Tea tree,
+                                    Air™, ZenGest, On Guard™, Lavender, Frankincense (olejki 5 ml)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-center sm:justify-end">
+                            <a href="https://doterra.me/yQPwUk" target="_blank" rel="noopener noreferrer"
+                                class="text-center bg-primary text-on-primary px-8 py-3 font-label-md text-label-md tracking-widest uppercase rounded-full hover:opacity-90 transition-opacity whitespace-nowrap">
+                                Zamawiam →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wiersz 2: Home Essentials -->
+            <div
+                class="reveal featured-card relative bg-surface rounded-xl border-2 border-primary/70 transition-all duration-500 overflow-visible mt-4 sm:mt-3">
+                <span
+                    class="featured-badge z-10 flex items-center gap-1.5 bg-primary text-on-primary font-label-md text-[11px] md:text-label-md tracking-widest uppercase px-4 py-1.5 rounded-full shadow-md whitespace-nowrap">
+                    <span class="material-symbols-outlined text-sm md:text-base">star</span>
+                    Najkorzystniejszy wybór
+                </span>
+
+                <div class="rounded-xl overflow-hidden">
+                    <div class="flex flex-col sm:flex-row">
+                        <div
+                            class="w-full h-48 sm:h-auto sm:w-48 md:w-60 flex-shrink-0 bg-surface-variant/40 p-4 md:p-6 flex items-center justify-center">
+                            <img src="../imgs/Home-Essentials.png" alt="Zestaw niezbędnych olejków dla domu"
+                                class="w-full h-full object-contain" loading="lazy">
+                        </div>
+                        <div class="flex-1 p-5 md:p-6">
+                            <div class="text-center sm:text-left">
+                                <h3 class="font-headline-md text-xl md:text-headline-md text-primary">Home Essentials -
+                                    zestaw podstawowych olejków dla całej rodziny i domu.</h3>
+                                <div
+                                    class="flex flex-wrap items-baseline gap-2 md:gap-3 justify-center sm:justify-start mt-1">
+                                    <span
+                                        class="font-body-md text-body-md text-on-surface-variant line-through opacity-60">1990,34
+                                        zł</span>
+                                    <span
+                                        class="font-headline-md text-xl md:text-headline-md text-primary font-bold">1492,75
+                                        zł</span>
+                                    <span
+                                        class="font-caption text-caption bg-tertiary text-on-tertiary px-2 py-0.5 rounded-full">-25%</span>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 justify-center sm:justify-start">
+                                <p class="font-body-md text-body-md text-on-surface-variant text-center sm:text-left">
+                                    Najbardziej kompletny zestaw na start — 6 olejków, 4 autorskie mieszanki i dyfuzor
+                                    w komplecie.
+                                </p>
+                                <button onclick="toggleDetail(this)"
+                                    class="flex-shrink-0 inline-flex items-center gap-1 border border-primary/60 text-primary px-3.5 py-1.5 font-label-md text-[11px] tracking-widest uppercase rounded-full hover:bg-primary hover:text-on-primary hover:border-primary transition-colors whitespace-nowrap">
+                                    <span>Zobacz więcej</span>
+                                    <span class="material-symbols-outlined chevron text-sm">expand_more</span>
+                                </button>
+                            </div>
+                            <div class="detail-panel">
+                                <div class="border-t border-outline-variant/20 mt-3 pt-4 pb-1">
+                                    <p
+                                        class="font-body-md text-body-md text-on-surface-variant text-center sm:text-left">
+                                        6 pojedynczych olejków i 4 autorskie mieszanki dōTERRA, plus ultradźwiękowy
+                                        dyfuzor w komplecie.</p><br>
+                                    Frankincense, Lavender, Lemon, Tea tree, Oregano, Peppermint, Air™, Deep Blue™, On
+                                    Guard™, ZenGest™ (olejki 15 ml poza olejkiem
+                                    Deep Blue™ który występuje jedynie w wersji 5 ml)
+                                    To baza, dzięki której możesz od razu zacząć świadomą aromaterapię
+                                    w całym domu, bez dokupywania niczego dodatkowego.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-center sm:justify-end">
+                                <a href="https://doterra.me/u7iL_C" target="_blank" rel="noopener noreferrer"
+                                    class="text-center bg-primary text-on-primary px-8 py-3 font-label-md text-label-md tracking-widest uppercase rounded-full hover:opacity-90 transition-opacity whitespace-nowrap">
+                                    Zamawiam →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Wiersz 3: AromaTouch Technique -->
+            <div
+                class="reveal bg-surface rounded-xl border border-outline-variant/20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden">
+                <div class="flex flex-col sm:flex-row">
+                    <div
+                        class="w-full h-48 sm:h-auto sm:w-48 md:w-60 flex-shrink-0 bg-surface-variant/40 p-4 md:p-6 flex items-center justify-center">
+                        <img src="../imgs/AromaTouch.png" alt="Zestaw AromaTouch Technique"
+                            class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                    <div class="flex-1 p-5 md:p-6">
+                        <div class="text-center sm:text-left">
+                            <h3 class="font-headline-md text-xl md:text-headline-md text-primary">Zestaw AromaTouch</h3>
+                            <div
+                                class="flex flex-wrap items-baseline gap-2 md:gap-3 justify-center sm:justify-start mt-1">
+                                <span
+                                    class="font-body-md text-body-md text-on-surface-variant line-through opacity-60">1,131.66
+                                    zł</span>
+                                <span class="font-headline-md text-xl md:text-headline-md text-primary font-bold">848.75
+                                    zł</span>
+                                <span
+                                    class="font-caption text-caption bg-tertiary text-on-tertiary px-2 py-0.5 rounded-full">-25%</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 justify-center sm:justify-start">
+                            <p class="font-body-md text-body-md text-on-surface-variant text-center sm:text-left">
+                                8 olejków i mieszanek do rytuału relaksacyjnego masażu techniką AromaTouch, plus olej
+                                bazowy.
+                            </p>
+                            <button onclick="toggleDetail(this)"
+                                class="flex-shrink-0 inline-flex items-center gap-1 border border-primary/60 text-primary px-3.5 py-1.5 font-label-md text-[11px] tracking-widest uppercase rounded-full hover:bg-primary hover:text-on-primary hover:border-primary transition-colors whitespace-nowrap">
+                                <span>Zobacz więcej</span>
+                                <span class="material-symbols-outlined chevron text-sm">expand_more</span>
+                            </button>
+                        </div>
+                        <div class="detail-panel">
+                            <div class="border-t border-outline-variant/20 mt-3 pt-4 pb-1">
+                                <p class="font-body-md text-body-md text-on-surface-variant text-center sm:text-left">
+                                    Olejki 5 ml + dyfuzor petal 2.0, + Frakcjonowany olej kokosowy do rozcieńczania
+                                    olejków.
+
+                                    AromaTouch™, Balance™, Deep Blue™, Lavender, Tea tree,
+                                    On Guard™, Peppermint, Wild Orange, Frakcjonowany olej kokosowy.
+                                    </br>
+                                    Technika masażu AromaTouch łączy działanie olejków eterycznych CPTG™ (Testowana
+                                    Certyfikowana Czysta Jakość) oraz sprawdzoną metodę aplikacji, dzięki czemu poprawia
+                                    ogólne samopoczucie i wzmacnia efekty działania olejków eterycznych.
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-center sm:justify-end">
+                            <a href="https://doterra.me/qnYBSS" target="_blank" rel="noopener noreferrer"
+                                class="text-center bg-primary text-on-primary px-8 py-3 font-label-md text-label-md tracking-widest uppercase rounded-full hover:opacity-90 transition-opacity whitespace-nowrap">
+                                Zamawiam →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Wiersz 4: Cleanse & Restore -->
+            <div
+                class="reveal delay-100 bg-surface rounded-xl border border-outline-variant/20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden">
+                <div class="flex flex-col sm:flex-row">
+                    <div
+                        class="w-full h-48 sm:h-auto sm:w-48 md:w-60 flex-shrink-0 bg-surface-variant/40 p-4 md:p-6 flex items-center justify-center">
+                        <img src="https://prd-evo-content.doterra.com/europe/images/products/collections/2024/cleanse-and-restore-kit-rev24-large-1720x1350-eu.png"
+                            alt="Zestaw niezbędnych olejków dla rodziny" class="w-full h-full object-contain"
+                            loading="lazy">
+                    </div>
+                    <div class="flex-1 p-5 md:p-6">
+                        <div class="text-center sm:text-left">
+                            <h3 class="font-headline-md text-xl md:text-headline-md text-primary">Zestaw
+                                oczyszczająco-odbudowujący (Cleanse & Restore)</h3>
+                            <div
+                                class="flex flex-wrap items-baseline gap-2 md:gap-3 justify-center sm:justify-start mt-1">
+                                <span
+                                    class="font-body-md text-body-md text-on-surface-variant line-through opacity-60">1,949.99
+                                    zł</span>
+                                <span
+                                    class="font-headline-md text-xl md:text-headline-md text-primary font-bold">1,462.49
+                                    zł</span>
+                                <span
+                                    class="font-caption text-caption bg-tertiary text-on-tertiary px-2 py-0.5 rounded-full">-25%</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 justify-center sm:justify-start">
+                            <p class="font-body-md text-body-md text-on-surface-variant text-center sm:text-left">
+                                Ten super zestaw jest pełen produktów, które pomogą Ci cieszyć się trwałym zdrowiem i
+                                dobrym
+                                samopoczuciem prze całe życie.
+                            </p>
+                            <button onclick="toggleDetail(this)"
+                                class="flex-shrink-0 inline-flex items-center gap-1 border border-primary/60 text-primary px-3.5 py-1.5 font-label-md text-[11px] tracking-widest uppercase rounded-full hover:bg-primary hover:text-on-primary hover:border-primary transition-colors whitespace-nowrap">
+                                <span>Zobacz więcej</span>
+                                <span class="material-symbols-outlined chevron text-sm">expand_more</span>
+                            </button>
+                        </div>
+                        <div class="detail-panel">
+                            <div class="border-t border-outline-variant/20 mt-3 pt-4 pb-1">
+                                <p class="font-body-md text-body-md text-on-surface-variant text-center sm:text-left">
+                                    Zestaw zawiera: Kapsułki DDR Prime,
+                                    GX Assist™,
+                                    dōTERRA Lifelong Vitality Pack™,
+                                    PB Restore™,
+                                    TerraZyme,
+                                    Kapsułki Zendocrine™,
+                                    Kompleks Zendocrine™.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-center sm:justify-end">
+                            <a href="https://doterra.me/aL1l3R" target="_blank" rel="noopener noreferrer"
+                                class="text-center bg-primary text-on-primary px-8 py-3 font-label-md text-label-md tracking-widest uppercase rounded-full hover:opacity-90 transition-opacity whitespace-nowrap">
+                                Zamawiam →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer id="kontakt" class="bg-[#F8F6F2] border-t border-[#E5DED2] py-14">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-4xl font-serif text-[#486548] mb-3">Naroma Wellness</h3>
+            <p class="text-[#6F7867] mb-12">Naturalna droga do zdrowia i dobrego samopoczucia 🌿</p>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <span class="material-symbols-outlined text-4xl text-[#B88422] mb-3">mail</span>
+                    <h4 class="font-semibold text-[#486548] uppercase tracking-wider mb-2">E-mail</h4>
+                    <a href="mailto:naroma.wellness@gmail.com"
+                        class="text-[#6F7867] hover:text-[#B88422] transition">naroma.wellness@gmail.com</a>
+                </div>
+                <div class="text-center">
+                    <span class="material-symbols-outlined text-4xl text-[#B88422] mb-3">photo_camera</span>
+                    <h4 class="font-semibold text-[#486548] uppercase tracking-wider mb-2">Instagram</h4>
+                    <a href="https://instagram.com/naroma.wellness" target="_blank"
+                        class="text-[#6F7867] hover:text-[#B88422] transition">@naroma.wellness</a>
+                </div>
+                <div class="text-center">
+                    <span class="material-symbols-outlined text-4xl text-[#B88422] mb-3">description</span>
+                    <h4 class="font-semibold text-[#486548] uppercase tracking-wider mb-2">Dokumenty</h4>
+                    <a href="../polityka-prywatnosci/" class="text-[#6F7867] hover:text-[#B88422] transition">Polityka
+                        prywatności</a>
+                </div>
+            </div>
+            <div class="border-t border-[#486548] mt-12 pt-6">
+                <p class="text-sm text-[#8E9488]">© 2026 Naroma Wellness • Wszelkie prawa zastrzeżone</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.15 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Menu mobilne
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuIcon.textContent = 'menu';
+        }
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuIcon.textContent = isOpen ? 'close' : 'menu';
+        });
+
+        // zamknij menu po kliknięciu w link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        function toggleDetail(btn) {
+            const card = btn.closest('.rounded-xl');
+            const panel = card.querySelector('.detail-panel');
+            const chevron = btn.querySelector('.chevron');
+            const label = btn.querySelector('span:first-child');
+            const isOpen = panel.classList.toggle('open');
+            chevron.classList.toggle('open', isOpen);
+            label.textContent = isOpen ? 'Ukryj opis' : 'Zobacz więcej';
+        }
+    </script>
+
+</body>
+
+</html>
